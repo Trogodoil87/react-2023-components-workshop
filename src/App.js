@@ -1,3 +1,5 @@
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
 import { Search } from "./components/search/Search";
@@ -21,6 +23,12 @@ function App() {
                     {/* <div className="spinner"></div> */}
                     <UserList />
                     <Pagination />
+                    <div><Link to="someinfo">Go to </Link></div>
+
+                    <Routes>
+                        <Route path="/someinfo" element={<h1>Some Info</h1>} />
+                    </Routes>
+
                 </section>
             </main>
             <Footer />
